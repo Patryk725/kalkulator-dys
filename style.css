@@ -99,7 +99,7 @@ img{
     cursor: pointer;
 }
 
-.wynik{
+#wynik{
     grid-column: 3/4;
     text-align: center;
     background-color: #222;

@@ -19,4 +19,6 @@
     * Jeśli nie wpisałeś drogi, to ile przejdziesz km w podanym czasie i wpisanej prędkości
 
 ### Notatka:
-    Aby wynik nie był zbyt duży, użyłem funkcji,  / która zmniejsza zera po przecinku nie zaokrąglając przy tym liczb.
+    Aby wynik nie był zbyt duży, użyłem funkcji,
+    która zmniejsza zera po przecinku
+    nie zaokrąglając przy tym liczb.

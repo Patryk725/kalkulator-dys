@@ -29,6 +29,25 @@ main{
     margin: 1em;
     border: var(--border);
     overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.card:hover,.submit:hover{
+    transition: all .1s ease-in-out;
+    outline: 5px solid red;
+    filter: hue-rotate(90deg) brightness(150%);
+}
+
+ /* Usunięcie Strzałek w inpucie */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .card img,h1{
@@ -56,7 +75,7 @@ main{
 }
 
 .card input:focus{
-    outline: none;
+    outline: 5px solid red;
 }
 
 .card button{
@@ -126,4 +145,16 @@ img{
         flex-direction: column;
     }
     .card{border: none;}
+
+    .submit{
+        width: 100%;
+    }
+    .submit>button{
+        width: 100%;
+        height: 2em;
+    }
+    #wynik{
+        width: 100%;
+        height: 2em;
+    }
 }

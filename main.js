@@ -6,6 +6,8 @@ const toTime=()=>
     let goal = document.getElementById("field3").value;
     let submit = document.getElementById("wynik");
 
+    let sum;
+
     // Jeśli wartość ma być pusta 👇
     // alert(velocity==null||velocity=="")
 
@@ -14,17 +16,17 @@ const toTime=()=>
 
     // Bramki, jeśli dwa inputy są wpisane, a jeden nie
     if(velocity==null||velocity=="" && time && goal)
-    {submit.innerHTML="prędkość: "+goal/time+" km/h"}
+    {sum=goal/time;sum=sum.toPrecision(1);submit.innerHTML="prędkość: "+sum+" km/h"}
 
     else if(time==null||time=="" && velocity && goal)
-    {submit.innerHTML="do celu za: "+goal/velocity+" godzin"}
+    {sum=goal/velocity;sum=sum.toPrecision(1);submit.innerHTML="do celu za: "+sum+" godzin"}
 
     else if(goal==null||goal=="" && velocity && time)
-    {submit.innerHTML="zostało ci: "+time*velocity+" kilometrów"} 
+    {sum=time*velocity;sum=sum.toPrecision(1);submit.innerHTML="zostało ci: "+sum+" kilometrów"} 
 
     //Bramka, jeśli żadne pole nie zostało wypełnione
     else if(velocity==null||velocity=="" && time==null||time=="" && goal==null||goal=="")
-    {alert("Nie wypełniłeś żadnego pola")}
+    {alert("Nie wypełniłeś wszystkich pól")}
     
     // W przeciwnym razie zaznaczono za dużo pól
     else{alert("Za dużo pól, zostaw jedno puste")}
